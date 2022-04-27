@@ -1,7 +1,7 @@
 {
-  "name": "@svgr/hast-util-to-babel-ast",
+  "name": "@bowen7/hast-util-to-babel-ast",
   "description": "Transform HAST to Babel AST (JSX)",
-  "version": "5.5.0",
+  "version": "5.5.1",
   "main": "lib/index.js",
   "repository": "https://github.com/gregberge/svgr/tree/master/packages/hast-util-to-babel-ast",
   "author": "Greg Bergé <berge.greg@gmail.com>",
@@ -26,9 +26,8 @@
   },
   "license": "MIT",
   "scripts": {
-    "prebuild": "rimraf lib/",
-    "build": "babel --config-file ../../babel.config.js -d lib --ignore \"**/*.test.js\" src",
-    "prepublishOnly": "yarn run build"
+    "prebuild": "rm -rf lib/",
+    "build": "babel --config-file ../../babel.config.js -d lib --ignore \"**/*.test.js\" src"
   },
   "dependencies": {
     "@babel/types": "^7.12.6",
